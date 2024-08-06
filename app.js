@@ -30,6 +30,7 @@ app.use(
         resave: false,
         cookie: {
             sameSite: 'none',
+            secure: true,
             maxAge: (60000 * 60) * 24,
         },
     })
