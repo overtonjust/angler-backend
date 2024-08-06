@@ -12,7 +12,7 @@ const viewAllWatchlists = async (userId) => {
 
 const getOneWatchlist = async (watchlistId) => {
     try {
-        const watchlistFound = await db.one("SELECT watchlists.id, name, is_favorite FROM watchlists WHERE id = $1",watchlistId);
+        const watchlistFound = await db.one("SELECT watchlists.id, name, description, is_favorite FROM watchlists WHERE id = $1",watchlistId);
         return watchlistFound;
     } catch (error) {
         return error;
