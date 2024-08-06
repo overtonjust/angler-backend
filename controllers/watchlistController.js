@@ -24,6 +24,7 @@ watchlists.get('/:id', async (req, res) => {
     const { id } = req.params;
     const watchlistFound = await getOneWatchlist(id);
     const fish = await viewWatchlistDetails(id);
+    console.log(id, watchlistFound, fish)
 
     if(fish[0]){
         res.status(200).json({...watchlistFound, fish})
