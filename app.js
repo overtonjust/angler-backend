@@ -56,7 +56,7 @@ app.post('/signup', async (req, res) => {
         req.session.user = authLogin;
         res.status(201).json({ message: "New user created. Welcome to Angler!"})
     } else {
-        res.status(404).json({error: "Something went wrong"})
+        res.status(404).json({error: "Something went wrong. User might already exist"})
     }
 });
 

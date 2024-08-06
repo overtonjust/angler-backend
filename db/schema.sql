@@ -2,14 +2,15 @@ DROP DATABASE IF EXISTS angler_dev;
 CREATE DATABASE angler_dev;
 
 \c angler_dev;
+    -- is_admin boolean <- for future admin functionality
 
+DROP TABLE IF EXISTS users;
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(20) NOT NULL UNIQUE,
     password VARCHAR(30) NOT NULL,
     email TEXT NOT NULL,
     UNIQUE (username, email)
-    -- is_admin boolean <- for future admin functionality
 );
 
 CREATE TABLE watchlists (
