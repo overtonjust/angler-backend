@@ -29,7 +29,7 @@ app.use(
         saveUninitialized: false,
         resave: false,
         cookie: {
-            sameSite: 'lax',
+            sameSite: 'none',
             maxAge: (60000 * 60) * 24,
         },
     })
