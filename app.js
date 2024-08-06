@@ -8,6 +8,7 @@ const indexController = require('./controllers/indexController');
 const watchlistController = require('./controllers/watchlistController');
 const finderController = require('./controllers/finderController');
 
+
 // Validation
 const { validateUser } = require('./validation/loginValidation');
 
@@ -18,6 +19,7 @@ const {
 } = require('./queries/usersQueries');
 
 // Middleware
+app.set('trust proxy', 1);
 app.use(express.json());
 app.use(cors({
     origin: ['http://localhost:5173','https://anglerffxiv.netlify.app', 'https://angler-backend.onrender.com'],
