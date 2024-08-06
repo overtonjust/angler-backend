@@ -20,7 +20,7 @@ const {
 // Middleware
 app.use(express.json());
 app.use(cors({
-    origin: ['http://localhost:5173','https://anglerffxiv.netlify.app/'],
+    origin: ['http://localhost:5173','https://anglerffxiv.netlify.app/', 'https://angler-backend.onrender.com'],
     credentials: true
 }));
 app.use(
