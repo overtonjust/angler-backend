@@ -23,6 +23,7 @@ const removeFromList = async (lookup) => {
                 lookup.fish_id
             ]
         )
+        return deletedFish;
     } catch (error) {
         return error;
     }

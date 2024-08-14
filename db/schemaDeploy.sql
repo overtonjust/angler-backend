@@ -1,8 +1,7 @@
-DROP DATABASE IF EXISTS angler_dev;
-CREATE DATABASE angler_dev;
-
-\c angler_dev;
-    -- is_admin boolean <- for future admin functionality
+DROP TABLE IF EXISTS watchlists;
+DROP TABLE IF EXISTS fish_finder;
+DROP TABLE IF EXISTS fish;
+DROP TABLE IF EXISTS users CASCADE;
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
