@@ -8,7 +8,7 @@
     "db:init": "psql -U postgres -f db/schema.sql",
     "db:seed": "psql -U postgres -f db/seed.sql",
     "setup": "psql -U postgres -f db/schema.sql -f db/seed.sql",
-    "deploy-setup": "psql -U postgres -f db/schemaDeploy.sql -f db/seedDeploy.sql",
+    "deploy-setup": "psql postgresql://angler_dbpsql_user:zEyEGZA3VexEI5kM5nXj5YpqMFgAvWoH@dpg-cqp5c2ogph6c73fhfgf0-a/angler_dbpsql -f db/schemaDeploy.sql -f db/seedDeploy.sql",
     "test": "jest"
   },
   "keywords": [],
